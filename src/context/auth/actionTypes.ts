@@ -1,5 +1,5 @@
 export interface AuthState {
-  isAuthenticated: boolean;
+  isLoggedIn: boolean;
   user: User | null;
   loading: boolean;
   error: string | null;
@@ -9,7 +9,8 @@ export interface AuthState {
 // 
 
 export type User = {
-  id: number
+  id: number,
+  name: string,
 }
 
 // FIX 

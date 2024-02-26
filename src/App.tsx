@@ -11,9 +11,10 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/" element={<PrivateRoute>
-          <Home />
-        </PrivateRoute>}>
+        <Route path="/home" element={
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>}>
         </Route>
         </Routes>
     </BrowserRouter>

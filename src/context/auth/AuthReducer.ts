@@ -1,7 +1,7 @@
 import { AuthAction, AuthState, ActionTypes } from './actionTypes';
 
 export const initialAuthState: AuthState = {
-  isAuthenticated: false,
+  isLoggedIn: false,
   user: null,
   loading: false,
   error: null,
@@ -20,7 +20,7 @@ const AuthReducer = (state: AuthState, action: AuthAction): AuthState => {
     case ActionTypes.REGISTER_SUCCESS:
       return {
         ...state,
-        isAuthenticated: true,
+        isLoggedIn: true,
         user: action.payload.user,
         loading: false,
         error: null,
@@ -29,7 +29,7 @@ const AuthReducer = (state: AuthState, action: AuthAction): AuthState => {
     case ActionTypes.REGISTER_FAILURE:
       return {
         ...state,
-        isAuthenticated: false,
+        isLoggedIn: false,
         loading: false,
         error: action.payload.error,
       };

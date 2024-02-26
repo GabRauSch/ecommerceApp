@@ -1,12 +1,36 @@
-import React, { useState } from 'react';
+import React, { FormEvent, useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../context/auth/AuthContext';
+import { ActionTypes } from '../context/auth/actionTypes';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { dispatch } = useContext(AuthContext);
+  const {state} = useContext(AuthContext);
+  const navigate = useNavigate()
 
-  const handleLogin = () => {
-    console.log('Logging in with email:', email, 'and password:', password);
+  const handleLogin = (e: FormEvent) => {
+    e.preventDefault();
+
+    
+    dispatch({ type: ActionTypes.LOGIN_REQUEST });
+
+    try {
+      dispatch({
+        type: ActionTypes.LOGIN_SUCCESS,
+        payload: { user: { id: 1, name: 'test' } },
+      });
+      navigate('/home')
+
+    } catch (error) {
+      dispatch({ type: ActionTypes.LOGIN_FAILURE, payload: { error: 'Login failed' } });
+    }
   };
+
+  useEffect(() => {
+    console.log(state); // Log the updated state after it's been updated
+  }, [state]);
 
   return (
     <div>
@@ -15,19 +39,19 @@ const Login = () => {
         <div>
           <label>Email:</label>
           <input
-            type="email"
+            type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
+            // required
           />
         </div>
         <div>
           <label>Password:</label>
           <input
-            type="password"
+            type="text"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
+            // required
           />
         </div>
         <button type="submit">Login</button>

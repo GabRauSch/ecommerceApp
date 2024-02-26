@@ -1,20 +1,22 @@
 import React, { createContext, useReducer, Dispatch, ReactNode } from 'react';
-import AuthReducer, {initialAuthState} from './AuthReducer';
+import AuthReducer, { initialAuthState } from './AuthReducer';
 import { AuthState, AuthAction } from './actionTypes';
 
-const AuthContext = createContext<{
+type AuthContextType = {
   state: AuthState;
   dispatch: Dispatch<AuthAction>;
-}>({
+};
+
+export const AuthContext = createContext<AuthContextType>({
   state: initialAuthState,
   dispatch: () => null,
 });
 
 type Props = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
-const AuthProvider = ({ children }: Props) => {
+export const AuthProvider = ({ children }: Props) => {
   const [state, dispatch] = useReducer(AuthReducer, initialAuthState);
 
   return (
@@ -24,4 +26,3 @@ const AuthProvider = ({ children }: Props) => {
   );
 };
 
-export { AuthContext, AuthProvider };
