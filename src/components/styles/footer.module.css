@@ -1,0 +1,12 @@
+footer{
+    height: 100px;
+    margin-top: 50px;
+    background-color: var(--third-color);
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}

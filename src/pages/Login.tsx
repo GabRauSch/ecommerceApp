@@ -29,7 +29,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    console.log(state); // Log the updated state after it's been updated
+    console.log(state);
   }, [state]);
 
   return (

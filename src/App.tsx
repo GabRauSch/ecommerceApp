@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import PrivateRoute from './routes/PrivateRoute';
+import NotFound from './pages/NotFound';
 
 const App: React.FC = () => {
   return (
@@ -16,7 +17,8 @@ const App: React.FC = () => {
             <Home />
           </PrivateRoute>}>
         </Route>
-        </Routes>
+        <Route path="*" element={<NotFound />}/>
+      </Routes>
     </BrowserRouter>
   );
 };
