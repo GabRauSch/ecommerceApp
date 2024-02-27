@@ -1,0 +1,34 @@
+
+.offerItem{
+    flex:1;
+    padding: 20px 40px;
+    border-left: 1px solid #ccc;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all ease .5s;
+}
+.offerItem:hover{
+    background-color: var(--third-color);
+}
+.offerItemImage{
+    width: 150px;
+}
+.offerItemImage img{
+    width: 100%;
+}
+.offerItemName{
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+}
+.offerItemDiscount{
+    background-color: #f22;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    width: fit-content;
+    padding: 0 22px
+}

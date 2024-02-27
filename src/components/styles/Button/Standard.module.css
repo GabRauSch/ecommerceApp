@@ -1,0 +1,15 @@
+.buttonSourceNow{
+    background-color: var(--buttons);
+    color: #fff;
+    border-radius: 3px;
+    padding: 2px 5px;
+    flex: 1;
+    cursor: pointer;
+    transition: all ease .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttonSourceNow:hover{
+    background-color: var(--buttons-hover);
+}

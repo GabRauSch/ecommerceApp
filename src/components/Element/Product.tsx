@@ -1,18 +1,26 @@
 import React from 'react';
 import Standard from '../Button/Standard';
+import styles from '../styles/Element/Product.module.css'
 
-const Product: React.FC = () => {
+type Props ={
+  image: string,
+  title: string,
+  originalPrice: string,
+  discountPrice: string
+}
+
+const Product = ({image, title, originalPrice, discountPrice}:Props) => {
   return (
-    <div className="product">
-        <div className="product-image">
-            <img src="capricornio.png" alt="" />
+    <div className={styles.product}>
+        <div className={styles.productImage}>
+            <img src={`assets/${image}`} alt="image" />
         </div>
-        <div className="product-info">
-            <div className="product-name">Caneca super legal</div>
-            <div className="buy-area">
-                <s className="product-original-price">R$80,00</s>
-                <div className="product-price">R$75,00</div>
-                <Standard />
+        <div className={styles.productInfo}>
+            <div className={styles.productName}>{title}</div>
+            <div className={styles.buyArea}>
+                <s className={styles.productOriginalPrice}>R${originalPrice}</s>
+                <div className={styles.productPrice}>R${discountPrice}</div>
+                <Standard text="Comprar"/>
             </div>
         </div>
     </div>

@@ -1,0 +1,31 @@
+.searchFilter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--buttons);
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    height: fit-content;
+    transition: all ease .5s;
+    cursor: pointer;
+    width: 140px;
+}
+
+.searchInput .searchIcon:hover,
+.searchFilter:hover{
+    background-color: var(--buttons-hover);
+}
+
+.filterText{
+    color: #fff;
+    flex: 1;
+    font-size: 14px;
+}
+.openMenu{
+    transform: rotate(90deg);
+    color: #fff
+}
+.searchFilter img{
+    width: 10px;
+}

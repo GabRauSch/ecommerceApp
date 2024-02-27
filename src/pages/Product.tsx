@@ -1,22 +1,22 @@
 import React from 'react';
 import Footer from '../components/Layout/Footer';
 import Header from '../components/Layout/Header';
-import ShowCase from '../components/Layout/home/ShowCase';
-import Offers from '../components/Layout/home/Offers';
 import Divider from '../components/Element/Divider';
-import MostViewed from '../components/Layout/ProductDisplay';
 import BuyProduct from '../components/Layout/BuyProduct';
 import ProductDisplay from '../components/Layout/ProductDisplay';
 import Comment from '../components/Element/Comment';
 
 const Home: React.FC = () => {
+  const products = [{
+    image:"capricornio.png", title:"Caneca super legal", discountPrice:"500,00", originalPrice:"750,00"
+  }]
   return (
     <>
         <Header />
         <main>
             <BuyProduct />
             <Divider />
-            <ProductDisplay />
+            <ProductDisplay products={products}/>
             <Divider />
             <section className="container" id="comments">
                 <Comment />

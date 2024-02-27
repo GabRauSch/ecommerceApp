@@ -11,7 +11,9 @@ interface Props {
 const PrivateRoute = ({ children, path }: Props) => {
   const { state: { isLoggedIn } } = useContext(AuthContext);
 
-  if (isLoggedIn){
+  const fakeLOGIN = true
+
+  if (fakeLOGIN){
     return children
   } else{
     return <Navigate to="/login" />

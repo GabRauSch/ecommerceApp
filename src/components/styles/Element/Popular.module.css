@@ -1,0 +1,23 @@
+
+.asideProduct{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 10px
+}
+.asideProductImageArea{
+    width: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+.asideProductImageArea img{
+    width: 100%;
+}
+.asideProductInfo{
+    display: flex;
+    flex-direction: column;
+}
+.asideProductName{
+    font-size: 15px;
+    font-weight: bold;
+}

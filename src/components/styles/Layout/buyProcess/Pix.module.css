@@ -1,0 +1,43 @@
+
+.pixPayment{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pixPaymentOption{
+    padding: 10px
+}
+.pixValueDisplay{
+    color: #333;
+    font-size: 21px;
+    margin-bottom: 10px
+}
+
+.scanArea{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.pixInstructions{
+    padding: 20px;
+    font-size: 14px;
+}
+.pixTitle{
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+.codeArea{
+    display: flex;
+    justify-content: center;
+}
+.codeArea div{
+    width: 150px;
+}
+.codeArea img{
+    width: 100%;
+}

@@ -1,12 +1,18 @@
-//  receives the type of products (recomendations, most viewed, related) ==> so it knows which paramenters to pass to the API
-
 import React from 'react';
 import Product from '../Element/Product';
+import styles from '../styles/Layout/ProductDisplay.module.css'
+import { Product as ProductType } from '../../types/Product';
 
-const ProductDisplay: React.FC = () => {
+type Props = {
+  products: ProductType[]
+}
+
+const ProductDisplay = ({products}:Props) => {
+
+
   return (
-    <section className="container" id="most-viewed">
-        <Product />
+    <section className="container" id={styles.mostViewed}>
+        <Product image="capricornio.png" title="Caneca super legal" discountPrice="500,00" originalPrice="750,00"/>
     </section>
   );
 };

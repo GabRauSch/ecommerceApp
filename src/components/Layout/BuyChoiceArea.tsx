@@ -1,19 +1,23 @@
 import React, { ReactNode } from 'react';
-import SelectItem from '../Interact/SelectItem';
 import Standard from '../Button/Standard';
+import styles from '../styles/Layout/BuyChoiceArea.module.css'
 
 type Props = {
-    children: ReactNode
+    children: ReactNode,
+    title: string
 }
-
-const BuyChoiceArea = ({children}: Props) => {
+const BuyChoiceArea = ({children, title}: Props) => {
   return (
-    <div className="buy-choice-area">
-        <div className="buy-info-title">Escolha a forma de entrega</div>
-            <div className="choice-area">
+    <div className={styles.buyChoiceArea}>
+        <div className="buyInfoTitle">{title}</div>
+            <div className={styles.choiceArea}>
                 {children}
             </div>
-            <Standard />
+            <div className={styles.buttonArea}>
+                <div className={styles.button}>
+                    <Standard text="Confirmar" color="#08c"/>
+                </div>
+            </div>
         </div>
   );
 };

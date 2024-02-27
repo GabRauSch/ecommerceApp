@@ -7,6 +7,10 @@ import Divider from '../components/Element/Divider';
 import ProductDisplay from '../components/Layout/ProductDisplay';
 
 const Home: React.FC = () => {
+  const products = [{
+    image:"capricornio.png", title:"Caneca super legal", discountPrice:"500,00", originalPrice:"750,00"
+  }]
+
   return (
     <>
         <Header/>
@@ -14,7 +18,7 @@ const Home: React.FC = () => {
             <ShowCase/>
             <Offers/>
             <Divider/>
-            <ProductDisplay />
+            <ProductDisplay products={products}/>
         </main>
         <Footer />
     </>

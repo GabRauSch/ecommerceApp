@@ -1,12 +1,16 @@
-// compras, carrinho, onde estamos
-
 import React from 'react';
+import styles from '../styles/Button/IconText.module.css'
 
-const IconText: React.FC = () => {
+type Props = {
+  icon: string,
+  text: string
+}
+
+const IconText = ({icon, text}: Props) => {
   return (
-    <div className="shop-icon">
-        <img src="retail-store-icon.svg" alt="retail"/>
-        <div className="shop-text">Compras</div>
+    <div className={styles.shopIcon}>
+        <img src={`assets/${icon}`} alt="retail"/>
+        <div className={styles.shopText}>{text}</div>
     </div>
   );
 };

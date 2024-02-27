@@ -1,11 +1,12 @@
 import React from 'react';
+import styles from '../styles/Button/ExpansibleList.module.css'
 
 const ExpansibleList: React.FC = () => {
   return (
-    <div className="search-filter">
-        <img src="menu.svg" alt="menu"/>
-        <div className="filter-text">Todas</div>
-        <div className="open-menu">›</div>
+    <div className={styles.searchFilter}>
+        <img src="assets/menu.svg" alt="menu"/>
+        <div className={styles.filterText}>Todas</div>
+        <div className={styles.openMenu}>›</div>
     </div>
   );
 };

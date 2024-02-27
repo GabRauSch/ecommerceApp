@@ -1,0 +1,37 @@
+
+#offers{
+    background-color: #fff;
+    display: flex;
+}
+.offersInfoArea{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.offersTitle{
+    font-weight: bold;
+    color: #333;
+    font-size: 20px;
+}
+.offersSubTitle{
+    color: #555
+}
+.offerRemainingTime{
+    background-color: var(--buttons);
+    color: #fff;
+    width: fit-content;
+    padding: 3px 10px;
+    border-radius: 10px;
+}
+.offersInfo{
+    width: fit-content;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+}
+.offerItems{
+    flex: 4;
+    display: flex;
+}

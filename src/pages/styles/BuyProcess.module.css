@@ -1,0 +1,187 @@
+#buyProcess{
+    display: flex;
+}
+
+aside{
+    flex: 1;
+}
+
+.buyInfo{
+    padding: 20px;
+}
+.buyInfoProduct{
+    width: 150px;
+}
+.buyInfoProduct img{
+    width: 100%;
+}
+.buyInfoItem{
+    background-color: #eee;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 14px;
+}
+.buyItemsList{
+    border-bottom: 1px solid #ccc;
+}
+.buyInfoName{
+    padding: 0 10px;
+    line-height: 17px;
+}
+.productItemNum{
+    font-size: 13px;
+    color: #08c
+}
+.buyInfoImage{
+    font-weight: bold;
+    color: #333;
+    display: flex;
+}
+.finalPrice{
+    font-size: 15px;
+}
+.buyInfoProductDisplay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+.buyNextImage{
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 40px;
+    transition: all ease .5s;
+}
+.buyNextImage:hover{
+    background-color: #ccc;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.productDisplayArea{
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.buyButtonArea{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px
+}
+.buyConfirm{
+    background-color: #08c;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 10px 20px;
+    color: #eee;
+    cursor: pointer;
+}
+.buyOptionPaymentInfo{
+    line-height: 20px;
+}
+.buyOptionDescription{
+    color: #888;
+    font-size: 15px;
+}
+.buyOptionHeaderPayment img{
+    width: 30px;
+}
+.buyOptionHeaderPayment{
+    display: flex;
+    padding: 10px;
+    gap: 10px
+}
+.buyOptionImage{
+    display: flex;
+    align-items: center;
+}
+.paymentChoice{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.paymentChoiceImage img{
+    width: 30px;
+}
+.paymentCardForm{
+    display: flex;
+}
+.paymentFormInputs{
+    display: flex;
+    flex-direction: column;
+}
+.paymentFormInputs label{
+    display: flex;
+    flex-direction: column;
+}
+.paymentFormInputs input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: 1px solid #ddd;
+}
+.paymentFormInputs input:focus{
+    outline: 2px solid #08c;
+}
+.paymentFormInputs label{
+    font-size: 16px;
+    color: #555;
+    padding: 10px
+}
+.cardInfo{
+    display: flex;
+}
+.paymentChoiceDescription{
+    color: #333
+}
+.paymentChoiceAlter{
+    color: #08c;
+    font-size: 12px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer
+}
+.buyInfoItemConfirmation{
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 14px;
+}
+hr{
+    border: none;
+    background-color: #ccc;
+    height: 1px;
+}
+.copyCodeArea{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+    font-size: 18px;
+    padding: 10px;
+    align-items: center;
+}
+.codeText{
+    color: #555
+}
+.copy{
+    position: absolute;
+    right: 0px;
+    background-color: #fff;
+    box-shadow: -5px 3px 8px 4px #fff;
+    text-align: center;
+    padding: 3px 5px;
+    color: #08c;
+    cursor: pointer;
+}

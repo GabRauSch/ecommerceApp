@@ -11,21 +11,16 @@ aside{
     flex: 1;
 }
 
-.buy-info{
+.buyInfo{
     padding: 20px;
 }
-.buy-info-title{
-    font-size: 21px;
-    color: #333;
-    font-weight: bold;
-}
-.buy-info-product{
+.buyInfoProduct{
     width: 150px;
 }
-.buy-info-product img{
+.buyInfoProduct img{
     width: 100%;
 }
-.buy-info-item{
+.buyInfoItem{
     background-color: #eee;
     border-radius: 10px;
     display: flex;
@@ -33,39 +28,39 @@ aside{
     margin: 10px;
     font-size: 14px;
 }
-.buy-items-list{
+.buyItemsList{
     border-bottom: 1px solid #ccc;
 }
-.buy-info-name{
+.buyInfoName{
     padding: 0 10px;
     line-height: 17px;
 }
-.product-item-num{
+.productItemNum{
     font-size: 13px;
     color: #08c
 }
-.buy-info-image{
+.buyInfoImage{
     font-weight: bold;
     color: #333;
     display: flex;
 }
-.buy-choice-area{
+.buyChoiceArea{
     padding: 20px;
     flex: 3;
 }
-.final-price{
+.finalPrice{
     font-size: 15px;
 }
-.buy-free{
+.buyFree{
     color: #095
 }
-.buy-info-product-display{
+.buyInfoProductDisplay{
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1;
 }
-.buy-next-image{
+.buyNextImage{
     font-size: 23px;
     display: flex;
     align-items: center;
@@ -74,17 +69,17 @@ aside{
     width: 40px;
     transition: all ease .5s;
 }
-.buy-next-image:hover{
+.buyNextImage:hover{
     background-color: #ccc;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.product-display-area{
+.productDisplayArea{
     padding: 10px;
     background-color: #fff;
     border-radius: 5px;
 }
-.buy-choice-option{
+.buyChoiceOption{
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -92,34 +87,16 @@ aside{
     padding: 10px;
     margin: 20px
 }
-.option-title{
+.optionTitle{
     display: flex;   
     align-items: center;
 }
-.buy-option-title{
-    font-size: 18px;
-}
-.buy-option-header{
-    margin-left: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.buy-option-price{
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-}
-.buy-option-info{
-    font-size: 14px;
-    padding: 10px 20px
-}
-.buy-button-area{
+.buyButtonArea{
     display: flex;
     justify-content: flex-end;
     padding: 20px
 }
-.buy-confirm{
+.buyConfirm{
     background-color: #08c;
     border-radius: 5px;
     width: fit-content;
@@ -127,76 +104,26 @@ aside{
     color: #eee;
     cursor: pointer;
 }
-.buy-option-payment-info{
+.buyOptionPaymentInfo{
     line-height: 20px;
 }
-.buy-option-description{
+.buyOptionDescription{
     color: #888;
     font-size: 15px;
 }
-.buy-option-header-payment img{
+.buyOptionHeaderPayment img{
     width: 30px;
 }
-.buy-option-header-payment{
+.buyOptionHeaderPayment{
     display: flex;
     padding: 10px;
     gap: 10px
 }
-.buy-option-image{
+.buyOptionImage{
     display: flex;
     align-items: center;
 }
-.payment-choice{
-    display: flex;
-    padding: 20px;
-    gap: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-}
-.payment-choice-image img{
-    width: 30px;
-}
-.payment-card-form{
-    display: flex;
-}
-.payment-form-inputs{
-    display: flex;
-    flex-direction: column;
-}
-.payment-form-inputs label{
-    display: flex;
-    flex-direction: column;
-}
-.payment-form-inputs input{
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    outline: 1px solid #ddd;
-}
-.payment-form-inputs input:focus{
-    outline: 2px solid #08c;
-}
-.payment-form-inputs label{
-    font-size: 16px;
-    color: #555;
-    padding: 10px
-}
-.card-info{
-    display: flex;
-}
-.payment-choice-description{
-    color: #333
-}
-.payment-choice-alter{
-    color: #08c;
-    font-size: 12px;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    cursor: pointer
-}
-.buy-info-item-confirmation{
+.buyInfoItemConfirmation{
     background-color: #fff;
     border-radius: 10px;
     display: flex;
@@ -204,21 +131,21 @@ aside{
     margin: 10px;
     font-size: 14px;
 }
-.pix-payment{
+.pixPayment{
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.pix-payment-option{
+.pixPaymentOption{
     padding: 10px
 }
-.pix-value-display{
+.pixValueDisplay{
     color: #333;
     font-size: 21px;
     margin-bottom: 10px
 }
-.scan-area{
+.scanArea{
     background-color: #fff;
     padding: 10px;
     border-radius: 5px;
@@ -226,23 +153,23 @@ aside{
     display: flex;
     flex-direction: column;
 }
-.pix-instructions{
+.pixInstructions{
     padding: 20px;
     font-size: 14px;
 }
-.pix-title{
+.pixTitle{
     font-size: 16px;
     color: #333;
     font-weight: bold;
 }
-.code-area{
+.codeArea{
     display: flex;
     justify-content: center;
 }
-.code-area div{
+.codeArea div{
     width: 150px;
 }
-.code-area img{
+.codeArea img{
     width: 100%;
 }
 hr{
@@ -250,7 +177,7 @@ hr{
     background-color: #ccc;
     height: 1px;
 }
-.copy-code-area{
+.copyCodeArea{
     border: 1px solid #ccc;
     border-radius: 5px;
     display: flex;
@@ -260,7 +187,7 @@ hr{
     padding: 10px;
     align-items: center;
 }
-.code-text{
+.codeText{
     color: #555
 }
 .copy{

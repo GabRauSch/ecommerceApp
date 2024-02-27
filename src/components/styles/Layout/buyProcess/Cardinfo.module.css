@@ -1,0 +1,54 @@
+
+.paymentCardForm{
+    display: flex;
+}
+.paymentFormInputs{
+    display: flex;
+    flex-direction: column;
+}
+.paymentFormInputs label{
+    display: flex;
+    flex-direction: column;
+}
+.paymentFormInputs input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: 1px solid #ddd;
+}
+.paymentFormInputs input:focus{
+    outline: 2px solid #08c;
+}
+.paymentFormInputs label{
+    font-size: 16px;
+    color: #555;
+    padding: 10px
+}
+.cardInfo{
+    display: flex;
+}
+
+.paymentChoice{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.paymentChoiceImage img{
+    width: 30px;
+}
+
+
+.paymentChoiceDescription{
+    color: #333
+}
+.paymentChoiceAlter{
+    color: #08c;
+    font-size: 12px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer
+}

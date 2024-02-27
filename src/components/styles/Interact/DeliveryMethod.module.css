@@ -1,0 +1,47 @@
+
+.buyChoiceOption{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px
+}
+.buyOptionTitle{
+    font-size: 18px;
+}
+.optionTitle{
+    display: flex;   
+    align-items: center;
+}
+.buyOptionTitle{
+    font-size: 18px;
+}
+.buyOptionHeader{
+    margin-left: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.buyOptionPrice{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+.buyOptionInfo{
+    font-size: 14px;
+    padding: 10px 20px
+}
+
+.buyFree{
+    color: #095
+}
+
+.buyOptionHeader img{
+    width: 30px;
+}
+
+.buyOptionDesc{
+    font-size: 13px;
+    color: #333;
+}

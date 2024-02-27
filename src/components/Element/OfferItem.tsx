@@ -1,13 +1,19 @@
 import React from 'react';
+import styles from '../styles/Element/OfferItem.module.css'
 
-const OfferItem: React.FC = () => {
+type Props = {
+  image: string,
+  text: string
+}
+
+const OfferItem = ({image, text}: Props) => {
   return (
-    <div className="offer-item">
-        <div className="offer-item-image">
-            <img src="capricornio.png" alt="capricornio" />
+    <div className={styles.offerItem}>
+        <div className={styles.offerItemImage}>
+            <img src={`assets/${image}`} alt="capricornio" />
         </div>
-        <div className="offer-item-name">Caneca Capricórnio</div>
-        <div className="offer-item-discount">-20%</div>
+        <div className={styles.offerItemName}>{text}</div>
+        <div className={styles.offerItemDiscount}>20%</div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import SelectItem from '../Interact/SelectItem';
+import SelectItem from '../Interact/DeliveryMethod';
 import Standard from '../Button/Standard';
 
 
@@ -8,7 +8,8 @@ const BuyConfirmation = () => {
     <div className="buy-choice-area">
         <div className="buy-info-title">Confirme suas informações</div>
         <div className="choice-area">
-            <SelectItem  /> {/* INPUT = FALSE */}
+            <SelectItem title="Enviar no endereço" description="" tax="Rua Sua Rua Muito linda, 120 - Palhoça" footer="Escolher outro endereço"/>
+
             <div className="buy-choice-option">
                 <div className="buy-items-list">
                     <div className="buy-info-item-confirmation">
@@ -30,7 +31,7 @@ const BuyConfirmation = () => {
                 </div>
             </div>
         </div>
-        <Standard />
+        <Standard  text="Comprar"/>
     </div> 
   );
 };

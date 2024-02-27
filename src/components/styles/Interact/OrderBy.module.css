@@ -1,0 +1,22 @@
+
+.listOrder{
+    padding: 5px 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 13px;
+    display: flex;
+}
+.listOrderPointers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #555;
+    margin-left: 8px;
+
+}
+.listOrderPointer{
+    font-size: 7px;
+    cursor: pointer;
+    line-height: 6px;
+}

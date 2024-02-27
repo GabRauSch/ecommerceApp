@@ -1,0 +1,60 @@
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoArea{
+    flex: 1;
+    cursor: pointer;
+}
+.logoArea img{
+    width: 60px;
+}
+.searchArea{
+    display: flex;
+    align-items: center;
+    flex: 2;
+}
+
+nav.shop{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    gap: 10px;
+    height: 100%;
+}
+nav.shop img{
+    width: 15px;
+}
+
+nav .shopIcon:hover{
+    filter: brightness(0);
+}
+nav .shopIcon{
+    font-weight: bold;
+    font-size: 13px;
+    color: #777;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all ease .5s;
+    cursor: pointer;
+    margin: 5px;
+    gap: 5px;
+}
+nav .shopText{
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+}

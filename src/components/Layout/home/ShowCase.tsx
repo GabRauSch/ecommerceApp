@@ -1,30 +1,31 @@
 import React from 'react';
 import Slider from '../../Element/Slider';
 import Popular from '../../Element/Popular';
+import styles from '../../styles/Layout/home/ShowCase.module.css'
 
 const ShowCase: React.FC = () => {
   return (
-    <section className="container" id="showcase">
-        <aside className="left-aside">
-            <div className="aside-title">Categorias</div>
-            <div className="categories-list">
-                <div className="category">Roupas</div>
-                <div className="category">Acessórios</div>
-                <div className="category">Luminárias</div>
-                <div className="category">Canecas</div>
-                <div className="category">Kharitas</div>
-                <div className="category">Especiais</div>
-                <div className="more-categories">
-                    <div className="category-text">Mais</div>
-                    <div className="more-categories-icon">›</div>
+    <section className="container" id={styles.showcase}>
+        <aside className={styles.leftAside}>
+            <div className={styles.asideTitle}>Categorias</div>
+            <div className={styles.categoriesList}>
+                <div className={styles.category}>Roupas</div>
+                <div className={styles.category}>Acessórios</div>
+                <div className={styles.category}>Luminárias</div>
+                <div className={styles.category}>Canecas</div>
+                <div className={styles.category}>Kharitas</div>
+                <div className={styles.category}>Especiais</div>
+                <div className={styles.moreCategories}>
+                    <div className={styles.categoryText}>Mais</div>
+                    <div className={styles.moreCategoriesIcon}>›</div>
                 </div>
             </div>
         </aside>
-        <div className="banner">
+        <div className={styles.banner}>
             <Slider />
         </div>
-        <aside className="right-aside">
-            <div className="aside-title-background">Populares</div>
+        <aside className={styles.rightAside}>
+            <div className={styles.asideTitleBackground}>Populares</div>
             <Popular />
             <Popular />
             <Popular />

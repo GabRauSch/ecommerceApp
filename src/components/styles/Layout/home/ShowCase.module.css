@@ -1,0 +1,54 @@
+
+#showcase{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 20px;
+}
+.asideTitle{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.moreCategories,
+.categoriesList .category{
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    padding: 10px 0;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+}
+.moreCategories:hover,
+.categoriesList .category:hover{
+    color: #000
+}
+
+.moreCategories{
+    justify-content: space-between;
+    align-items: center;
+}
+.moreCategoriesIcon{
+    font-size: 17px;
+}
+
+.leftAside{
+    flex: 1;
+}
+.banner{
+    flex: 3;
+}
+.rightAside{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.asideTitleBackground{
+    background-color: var(--buttons);
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+}
+

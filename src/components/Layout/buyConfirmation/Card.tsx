@@ -29,7 +29,7 @@ const Card = () => {
                 </div>
             </div>
         </div>
-        <Standard />
+        <Standard  text="Comprar"/>
     </div>
   );
 };

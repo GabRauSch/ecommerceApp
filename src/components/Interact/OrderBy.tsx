@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import styles from '../styles/Interact/OrderBy.module.css'
 
 const OrderBy = () => {
   return (
-    <div className="list-order">
-        <div className="list-order-text">Ultímos itens</div>
-        <div className="list-order-pointers">
-            <div className="list-order-pointer">▲</div>
-            <div className="list-order-pointer">▼</div>
+    <div className={styles.listOrder}>
+        <div className={styles.listOrderText}>Ultímos itens</div>
+        <div className={styles.listOrderPointers}>
+            <div className={styles.listOrderPointer}>▲</div>
+            <div className={styles.listOrderPointer}>▼</div>
         </div>
     </div>
   );
