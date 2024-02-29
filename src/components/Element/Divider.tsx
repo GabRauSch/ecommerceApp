@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Divider: React.FC = () => {
+type Props = {
+  text: string
+}
+
+const Divider = ({text}: Props) => {
   return (
     <div className="container section-division">
-        <div className="section-division-title">Mais comprados</div>
+        <div className="section-division-title">{text}</div>
         <div className="section-division-line"></div>
     </div>
   );

@@ -17,7 +17,7 @@ const Pix: React.FC = () => {
                 </div>
                 <div className={styles.codeArea}>
                     <div>
-                        <img src="qrcode.png" alt="" />
+                        <img src="assets/qrcode.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@ const Pix: React.FC = () => {
                     <div className={styles.codeText}>
                         asdlkfçasdkfjasçdlkfjaçsdlkfjaçsdkfljaçsldkfjçasldkfjçasldkfjçaskdlfjçaskldfjçasldkjfçaslkdfjçaskldfjçaskldfjça
                     </div>
-                    <div className="copy">copiar</div>
+                    <div className={styles.copy}>copiar</div>
                 </div>
             </div>
         </div>

@@ -1,25 +1,24 @@
 import React, { ReactNode } from 'react';
+import styles from './styles/BuyConfirmation.module.css'
+import Header from '../components/Layout/Header';
 
+type Props = {
+    email: string
+}
 
-const BuyConfirmation = () => {
+const BuyConfirmation = ({email}: Props) => {
   return (
     <>
-        <header>
-            <div className="container">
-                <div className="logo-area">
-                    <img src="kharitaslogo.png" alt="kharitas" />
-                </div>
-            </div>
-        </header>
+        <Header empty={true}/>
         <main>
             <section className="container">
-                <div className="message">
-                    <div className="payment-image">
-                        <img src="payment.svg" alt="payment" />
+                <div className={styles.message}>
+                    <div className={styles.paymentImage}>
+                        <img src="assets/payment.svg" alt="payment" />
                     </div>
-                    <div className="thanks">Obrigado por comprar com Kharitas!</div>
+                    <div className={styles.thanks}>Obrigado por comprar com Kharitas!</div>
                 </div>
-                <div className="confirmation">Seu pagamento foi confirmado, o comprovante será enviado para o email gabrielraulinoschoenell@gmail.com</div>
+                <div className={styles.confirmation}>Seu pagamento foi confirmado, o comprovante será enviado para o email {email}</div>
             </section>
         </main>
     </>

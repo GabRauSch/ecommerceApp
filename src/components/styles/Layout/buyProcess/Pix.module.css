@@ -41,3 +41,27 @@
 .codeArea img{
     width: 100%;
 }
+
+.copyCodeArea{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+    font-size: 18px;
+    padding: 10px;
+    align-items: center;
+}
+.codeText{
+    color: #555
+}
+.copy{
+    position: absolute;
+    right: 0px;
+    background-color: #fff;
+    box-shadow: -5px 3px 8px 4px #fff;
+    text-align: center;
+    padding: 3px 5px;
+    color: #08c;
+    cursor: pointer;
+}

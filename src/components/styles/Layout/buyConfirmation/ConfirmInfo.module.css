@@ -1,0 +1,119 @@
+
+.buyChoiceOption{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px
+}
+.optionTitle{
+    display: flex;   
+    align-items: center;
+}
+.buyButtonArea{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px
+}
+.buyConfirm{
+    background-color: #08c;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 10px 20px;
+    color: #eee;
+    cursor: pointer;
+}
+.buyOptionPaymentInfo{
+    line-height: 20px;
+}
+.buyOptionDescription{
+    color: #888;
+    font-size: 15px;
+}
+
+.buyOptionHeaderPayment img{
+    width: 30px;
+}
+.buyOptionHeaderPayment{
+    display: flex;
+    padding: 10px;
+    gap: 10px
+}
+
+.buyOptionHeader{
+    margin-left: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.buyOptionPrice{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+.buyOptionInfo{
+    font-size: 14px;
+    padding: 10px 20px
+}
+
+.buyItemsList{
+    border-bottom: 1px solid #ccc;
+}
+.buyInfoName{
+    padding: 0 10px;
+    line-height: 17px;
+}
+.productItemNum{
+    font-size: 13px;
+    color: #08c
+}
+.buyInfoImage{
+    font-weight: bold;
+    color: #333;
+    display: flex;
+}
+.buyChoiceArea{
+    padding: 20px;
+    flex: 3;
+}
+.finalPrice{
+    font-size: 15px;
+}
+.buyFree{
+    color: #095
+}
+.buyInfoProductDisplay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+.buyNextImage{
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 40px;
+    transition: all ease .5s;
+}
+.buyNextImage:hover{
+    background-color: #ccc;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.productDisplayArea{
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.buyInfoItemConfirmation{
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 14px;
+}

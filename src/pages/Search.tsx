@@ -6,8 +6,13 @@ import RangeInput from '../components/Interact/RangeInput';
 import OrderBy from '../components/Interact/OrderBy';
 import styles from './styles/Search.module.css'
 import Standard from '../components/Button/Standard';
+import ProductDisplay from '../components/Layout/ProductDisplay';
+import Divider from '../components/Element/Divider';
 
 const Search: React.FC = () => {
+const products = [{
+    image:"capricornio.png", title:"Caneca super legal", discountPrice:"500,00", originalPrice:"750,00"
+    }]
   return (
     <>
         <Header></Header>
@@ -69,6 +74,9 @@ const Search: React.FC = () => {
                     </div>
                 </div>
             </section>
+            
+            <Divider text="Relacionados"/>
+            <ProductDisplay products={products}/>
         </main>
         <Footer></Footer>
     </>

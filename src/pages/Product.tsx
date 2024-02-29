@@ -15,9 +15,9 @@ const Home: React.FC = () => {
         <Header />
         <main>
             <BuyProduct />
-            <Divider />
+            <Divider text="Relacionados"/>
             <ProductDisplay products={products}/>
-            <Divider />
+            <Divider text='Opiniões' />
             <section className="container" id="comments">
                 <Comment />
             </section>
