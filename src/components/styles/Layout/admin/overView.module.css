@@ -1,0 +1,187 @@
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+    flex: 8;
+    background-color: #fff;
+    max-height: 100vh;
+}
+.pageTitle{
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+.pageCards{
+    display: flex;
+    gap: 20px;
+}
+.profileImage{
+    width: 200px;
+}
+.profileImage img{
+    width: 100%;
+}
+.cardStaff{
+    flex: 3;
+}
+.cardScroll{
+    overflow-y: auto;
+    max-height: calc(100vh - 250px);
+}
+.cardButton{
+    box-shadow: 0px 0px 20px rgba(0,0,0,.1);
+    padding: 15px;
+    flex: 1;
+    color: #555;
+    border-radius: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all ease .5s;
+}
+.cardButton:hover,
+.cardButton.active{
+    background-color: #07c;
+    color: #fff
+}
+
+.cardTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+.tableBody,
+.tableHeader {
+    padding: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+}
+.tableBodyItem,
+.tableHeaderItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableHeader{
+    color: #777;
+    font-weight: bold;
+}
+.cardTable td div{
+    display: flex;
+}
+
+.pageAnalysis{
+    gap: 10px;
+    display: flex;
+    flex: 1;
+}
+.imageArea{
+    width: 30px;
+    display: flex;
+    align-items: center;
+}
+.imageArea img{
+    width: 100%;
+}
+.cardFilters{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+select, .filter{
+    border: none;
+    width: 100%;
+    outline: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    padding: 10px
+}
+.search{
+    border: none;
+    width: 100%;
+    outline: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+}
+.search input,
+.filter input{
+    border: 0;
+    outline: 0;
+    color: #555;
+    flex: 1;
+    padding: 10px;
+}
+.searchButton{
+    background-color: var(--buttons);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: all ease .5s;
+    cursor: pointer;
+}
+
+.searchButton img{
+    width: 15px;
+}
+
+
+option{
+    padding: 100px;
+}
+.cardArea{
+    gap: 10px;
+    display: flex;
+}
+.cardSelection{
+    outline: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all ease .4s;
+    color: #777
+}
+.cardSelection.selected,
+.cardSelection:hover{
+    background-color: rgba(0, 150, 250, 0.4);
+    color: rgb(0, 100, 150);
+}
+
+.pending{
+    background-color: #fc0;
+    border: 2px solid #c90;    
+    width: fit-content;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+.singleCardFilter{
+    display: flex;
+    width: fit-content;
+    gap: 20px
+}
+.productsDisplay{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px
+}
+.cardImage{
+    width: 50px;
+}
+.cardImage img{
+    width: 100%;
+}
+.cardFlex{
+    flex-direction: row;
+}
+.profileName{
+    font-size: 32px;
+    text-align: center;
+}
