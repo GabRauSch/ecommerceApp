@@ -1,10 +1,10 @@
 
-aside{
+.aside{
     background-color: #ccc;
     flex: 1;
     height: 100vh;
 }
-aside header{
+.aside header{
     background-color: #ccc;
 }
 

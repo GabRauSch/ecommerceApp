@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../styles/Layout/Cart.module.css'
 import CartItem from '../Element/CartItem';
+import { setServers } from 'dns';
 
 type Props = {
   handleToggleCart: ()=>void
@@ -14,10 +15,10 @@ const Cart = ({handleToggleCart}:Props) => {
           <div className={styles.exitCart} onClick={handleToggleCart}>
             <img src="assets/close-icon.svg" alt="" />
           </div>
-          <div className={styles.cartName}>Carrinho (3)</div>
+          <div className={styles.cartName}>Carrinho (1)</div>
         </div>
         <div className={styles.cartItems}>
-          <CartItem />
+          <CartItem id={1} name="Oculos daora" image="oculos.png" price={30.1} quantity={2}/>
         </div>
         <div className={styles.total}>
           <div className={styles.totalHeader}>

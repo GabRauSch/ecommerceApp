@@ -6,9 +6,11 @@ import Offers from '../components/Layout/home/Offers';
 import Divider from '../components/Element/Divider';
 import ProductDisplay from '../components/Layout/ProductDisplay';
 import Cart from '../components/Layout/Cart';
+import ErrorMessage from '../components/Element/ErrorMessage';
 
 const Home: React.FC = () => {
   const [isCartOpen, setIsCartOpen] = useState(false)
+  const [error, setError] = useState('')
   
   const toggleCartOpen = ()=>{
     setIsCartOpen(!isCartOpen);
@@ -29,10 +31,13 @@ const Home: React.FC = () => {
 
   return (
     <>
+    {error &&
+      <ErrorMessage message={error} clearError={()=>{setError('')}}/>
+    }
       {isCartOpen &&
         <Cart handleToggleCart={toggleCartOpen} />
       }
-        <Header/>
+        <Header icons={true} handleCart={toggleCartOpen}/>
         <main>
             <ShowCase/>
             <Offers/>

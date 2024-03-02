@@ -1,0 +1,32 @@
+
+#comments{
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+.comment{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+}
+.commentUsername{
+    font-size: 18px;
+    font-weight: bold;
+    color: #333
+}
+
+.commentRate img{
+    width: 13px;
+}
+.commentBody{
+    font-size: 14px;
+    color: #333
+}
+.commentHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.commentDate{
+    font-size: 12px;
+    color: #555
+}

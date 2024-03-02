@@ -1,48 +1,49 @@
 import React from 'react';
 import Standard from '../Button/Standard';
+import styles from '../styles/Layout/BuyProduct.module.css'
 
 const BuyProduct: React.FC = () => {
   return (
-    <section className="container" id="product">
-        <div className="product-image">
-            <img className="product-image-opened" src="bone.png" alt="bone" />
-            <div className="product-image-select">
-                <div className="product-image-item active-image"><img src="bone.png" alt="" /></div>
-                <div className="product-image-item"><img src="bonetras.png" alt="bonetras" /></div>
+    <section className="container" id={styles.product}>
+        <div className={styles.productImage}>
+            <img className={styles.productImageOpened} src="assets/bone.png" alt="bone" />
+            <div className={styles.productImageSelect}>
+                <div className={[styles.productImageItem,  styles.activeImage].join(' ')}><img src="assets/bone.png" alt="" /></div>
+                <div className={styles.productImageItem}><img src="assets/bonetras.png" alt="bonetras" /></div>
             </div>
         </div>
-        <div className="product-info">
-            <div className="product-name">
-                <div className="product-name-text">Bone super legal</div>
-                <div className="best-choice-sign">
-                    <img src="verified.svg" alt="" />
+        <div className={styles.productInfo}>
+            <div className={styles.productName}>
+                <div className={styles.productNameText}>Bone super legal</div>
+                <div className={styles.bestChoiceSign}>
+                    <img src="assests/verified.svg" alt="" />
                     Melhor escolha
                 </div>
             </div>
-            <div className="oficial-sign">Produto oficial</div>
-            <div className="product-price-description">
-                <s className="product-original-price">R$800,00</s>
-                <div className="product-price">R$750,00</div>
+            <div className={styles.oficialSign}>Produto oficial</div>
+            <div className={styles.productPriceDescription}>
+                <s className={styles.productOriginalPrice}>R$800,00</s>
+                <div className={styles.productPrice}>R$750,00</div>
             </div>
-            <div className="product-description">Bone super legal e super bem feito. Produzido à mão pela equipe mais incrível de todo o planeta, personalizável, feito como você quiser, feito para você. Eu amo você. Eu amo sua mãe, sua mãe é linda</div>
-            <div className="product-options">
-                <div className="product-option-item">
-                    <img src="delivery.svg" alt="delivery" />
+            <div className={styles.productDescription}>Bone super legal e super bem feito. Produzido à mão pela equipe mais incrível de todo o planeta, personalizável, feito como você quiser, feito para você. Eu amo você. Eu amo sua mãe, sua mãe é linda</div>
+            <div className={styles.productOptions}>
+                <div className={styles.productOptionItem}>
+                    <img src="assets/delivery.svg" alt="delivery" />
                 </div>
-                <div className="product-option-item">
-                    <img src="card.svg" alt="delivery" />
+                <div className={styles.productOptionItem}>
+                    <img src="assets/card.svg" alt="delivery" />
                 </div>
-                <div className="product-option-item">
-                    <img src="certified.svg" alt="delivery" />
+                <div className={styles.productOptionItem}>
+                    <img src="assets/certified.svg" alt="delivery" />
                 </div>
             </div>
-            <div className="buy-area">
-                <div className="buy-quantity">
+            <div className={styles.buyArea}>
+                <div className={styles.buyQuantity}>
                     Quantidade: 1 ▾
                 </div>
-                <div className="buy-area-buttons">
-                    <div className="buy-button">Comprar</div>
-                    <div className="cart-button">Adicionar ao carrinho</div>
+                <div className={styles.buyAreaButtons}>
+                    <div className={styles.buyButton}>Comprar</div>
+                    <div className={styles.cartButton}>Adicionar ao carrinho</div>
                 </div>
             </div>
         </div>

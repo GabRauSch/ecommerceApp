@@ -23,7 +23,7 @@ export enum ActionTypes {
   
   interface RemoveFromCartAction {
     type: ActionTypes.REMOVE_FROM_CART;
-    payload: { itemId: string };
+    payload: { itemId: number };
   }
   
   interface ClearCartAction {

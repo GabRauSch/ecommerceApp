@@ -9,7 +9,7 @@ const AdminAside = ()=>{
         setFinalPath(location.pathname.split('/')[2])
     }, [])
     return (
-        <aside>
+        <aside id={styles.aside}>
             <header>
                 <div className={styles.logoArea}>
                     <img src="/assets/kharitaslogo.png" alt="" />
