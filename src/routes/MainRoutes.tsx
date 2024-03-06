@@ -16,7 +16,7 @@ export const MainRoutes = ()=>{
         <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
+            <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
             <Route path="/search" element={<PrivateRoute><Search /></PrivateRoute>} />
             <Route path="/product" element={<PrivateRoute><Product /></PrivateRoute>} />
             <Route path="/buyProcess" element={<PrivateRoute><BuyProcess /></PrivateRoute>} />

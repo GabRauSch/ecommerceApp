@@ -1,8 +1,19 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import styles from '../styles/admin/Admin.module.css'
 import Card from '../../components/Element/Card';
 import CardValue from '../../components/Element/CardValue';
 const OverView = () => {
+    const [data, setData] = useState();
+    useEffect(()=>{
+        const b = {
+            boughts: 'compras',
+            totalValue: 'valor total',
+            totalClients: 'clientes totais',
+            newClients: 'clientes novos',
+            pastPeriod: 'periodo passado'
+        }
+    }, [])
+
   return (
     <>
         <section className={styles.page} id={styles.overView}>

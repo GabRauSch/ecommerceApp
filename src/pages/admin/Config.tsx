@@ -45,15 +45,15 @@ const Config = () => {
                             <div className={styles.tableBodyItem}>Pinheira</div>
                         </div>
                         <div className={styles.tableBody}>
-                            <div className={styles.tableBodyItem}>Fábia das Santas</div>
-                            <div className={styles.tableBodyItem}>fabiofabio@gmail.com</div>
+                            <div className={styles.tableBodyItem}>Arthur dos Santos</div>
+                            <div className={styles.tableBodyItem}>Arthur@gmail.com</div>
                             <div className={styles.tableBodyItem}>Logista</div>
                             <div className={styles.tableBodyItem}>admin - local</div>
                             <div className={styles.tableBodyItem}>Pinheira</div>
                         </div>
                         <div className={styles.tableBody}>
-                            <div className={styles.tableBodyItem}>Fábie des Santes</div>
-                            <div className={styles.tableBodyItem}>fabio@gmail.com</div>
+                            <div className={styles.tableBodyItem}>Rafael Freitas</div>
+                            <div className={styles.tableBodyItem}>rafafrei'@gmail.com</div>
                             <div className={styles.tableBodyItem}>Logista</div>
                             <div className={styles.tableBodyItem}>staff</div>
                             <div className={styles.tableBodyItem}>Pinheira</div>

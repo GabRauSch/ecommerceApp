@@ -23,7 +23,6 @@ const CartItem = ({id, image, name, price, quantity}: Props)=>{
         if(itemQuantity > 0){
             return setQuantity(itemQuantity - 1)
         }
-        setError('Exclua o item para tirá-lo do carrinho')
     }
     const removeItemFromCart = (itemId: number)=>{
         dispatch({ type: ActionTypes.REMOVE_FROM_CART, payload: {itemId} });

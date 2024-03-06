@@ -12,7 +12,7 @@ const WareHouse = () => {
                     <div className={styles.cardValue}>Todos</div>
                 </Card>
                 <Card title="Quantidade em estoque">
-                    <div className={styles.cardValue}>30000000</div>
+                    <div className={styles.cardValue}>300</div>
                 </Card>
                 <Card title="Produto com pendência">
                     <div className={styles.cardValue}>Não</div>

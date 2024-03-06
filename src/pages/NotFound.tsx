@@ -6,7 +6,7 @@ const NotFound = () => {
     const navigate = useNavigate()
 
     const redirectToMainPage = () => {
-        navigate('/product');
+        navigate('/');
     };
 
     return (

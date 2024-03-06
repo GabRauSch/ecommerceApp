@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import styles from '../styles/admin/Admin.module.css'
 import Card from '../../components/Element/Card';
+import Standard from '../../components/Button/Standard';
 const Products = () => {
   return (
     <>
@@ -65,8 +66,13 @@ const Products = () => {
                                 <div className={styles.tableBodyItem}>10%</div>
                                 <div className={styles.tableBodyItem}>R$108,00</div>
                                 <div className={styles.tableBodyItem}>20</div>
-                                <div className={styles.tableBodyItem}>R$130,00</div>
-                                <div className={styles.tableBodyItem}>R$400,00</div>
+                                <div className={styles.tableBodyItem}>130</div>
+                                <div className={styles.tableBodyItem}>Canecas</div>
+                            </div>
+                            <div className={styles.buttonArea}>
+                                <div>
+                                    <Standard text='Novo produto'/>
+                                </div>
                             </div>
                         </div>
                     </>

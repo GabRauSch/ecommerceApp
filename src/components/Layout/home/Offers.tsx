@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import OfferItem from '../../Element/OfferItem';
 import styles from '../../styles/Layout/home/Offers.module.css'
+import { ProductDiscount } from '../../../types/Product';
 
-const Offers: React.FC = () => {
+type Props = {
+  promotion: string,
+}
+
+const Offers = ({promotion}: Props) => {
+
+  useEffect(()=>{
+
+  }, [])
+
   return (
     <section className="container" id={styles.offers}>
         <div className={styles.offersInfoArea}>
             <div className={styles.offersInfo}>
                 <div className={styles.offersTitle}>Promoção</div>
-                <div className={styles.offersSubTitle}>Canecas de signo</div>
+                <div className={styles.offersSubTitle}>{promotion}</div>
                 <div className={styles.offerRemainingTime}>15:00:00</div>
             </div>
         </div>

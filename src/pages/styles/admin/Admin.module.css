@@ -142,8 +142,15 @@ select, .filter{
 .searchButton img{
     width: 15px;
 }
-
-
+.buttonArea {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px
+}
+.buttonArea div{
+    width: fit-content;
+    padding: 10px
+}
 option{
     padding: 100px;
 }

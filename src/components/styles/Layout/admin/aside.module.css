@@ -25,10 +25,10 @@
     color: #333
 }
 
-nav{
+.navigation{
     margin-top: 50px
 }
-nav ul{
+.navigation ul{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +37,7 @@ nav ul{
     color: #333;
     gap: 5px
 }
-nav ul li{
+.navigation ul li{
     padding: 10px;
     width: 80%;
     display: flex;
@@ -45,8 +45,8 @@ nav ul li{
     gap: 20px;
     cursor: pointer;
 }
-nav ul li.active,
-nav ul li:hover{
+.navigation ul li.active,
+.navigation ul li:hover{
     background-color: #eee;
     border-radius: 5px;
 }

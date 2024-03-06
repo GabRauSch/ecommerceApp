@@ -11,7 +11,7 @@ import Divider from '../components/Element/Divider';
 
 const Search: React.FC = () => {
 const products = [{
-    image:"capricornio.png", title:"Caneca super legal", discountPrice:"500,00", originalPrice:"750,00"
+    image:"capricornio.png", name:"Caneca super legal", discountPrice:500.00, originalPrice:750.00
     }]
   return (
     <>
@@ -76,7 +76,7 @@ const products = [{
             </section>
             
             <Divider text="Relacionados"/>
-            <ProductDisplay products={products}/>
+            {/* <ProductDisplay products={products}/> */}
         </main>
         <Footer></Footer>
     </>

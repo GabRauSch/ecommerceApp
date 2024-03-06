@@ -21,7 +21,7 @@ const Header = ({empty, icons, handleCart}: Props) => {
   return (
     <header>
         <div className="container">
-            <div className={styles.logoArea} onClick={()=>{navigate('/home')}}>
+            <div className={styles.logoArea} onClick={()=>{navigate('/')}}>
                 <img src="kharitaslogo.png" alt="kharitas" />
             </div>
             {empty !== null && !empty ? (
@@ -30,15 +30,15 @@ const Header = ({empty, icons, handleCart}: Props) => {
                         <ExpansibleList />
                         <SearchInput />
                     </div>
-                        <nav className={styles.shop}>
-                            {icons !== null && icons && handleCart ? (
-                                <>
-                                <IconText icon="retail-store-icon.svg" text="Compras" onPress={handlePendentItems}/>
-                                <IconText icon="shopping-cart-icon.svg" text="Carrinho" onPress={handleCart}/>
-                                <IconText icon="maps-pin-black-icon.svg" text="Onde estamos" onPress={handlePendentItems}/>
-                                </>
-                            ) : null}
-                        </nav>
+                    <nav className={styles.shop}>
+                        {icons !== null && icons && handleCart ? (
+                            <>
+                            <IconText icon="retail-store-icon.svg" text="Compras" onPress={handlePendentItems}/>
+                            <IconText icon="shopping-cart-icon.svg" text="Carrinho" onPress={handleCart}/>
+                            <IconText icon="maps-pin-black-icon.svg" text="Onde estamos" onPress={handlePendentItems}/>
+                            </>
+                        ) : null}
+                    </nav>
                 </>
             ) : null            
             }

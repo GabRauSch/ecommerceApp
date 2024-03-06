@@ -9,16 +9,16 @@ const Sales = ()=>{
                 <Card title="Vendas totais" color="#000">
                     <div className={styles.cardValue}>50</div>
                 </Card>
-                <Card title="Vendas totais" color="#090">
+                <Card title="Entregues" color="#090">
                     <div className={styles.cardValue}>48</div>
                 </Card>
-                <Card title="Vendas totais" color="#f90">
+                <Card title="Pendentes de entrega" color="#f90">
                     <div className={styles.cardValue}>2</div>
                 </Card>
-                <Card title="Vendas totais" color="#099">
+                <Card title="Pagas esperando aprovação" color="#099">
                     <div className={styles.cardValue}>0</div>
                 </Card>
-                <Card title="Vendas totais" color="#c00">
+                <Card title="Vendas com erro" color="#c00">
                     <div className={styles.cardValue}>0</div>
                 </Card>
             </div>
@@ -57,9 +57,9 @@ const Sales = ()=>{
                             <div className={styles.tableBody}>
                                 <div className={styles.tableBodyItem}>123</div>
                                 <div className={styles.tableBodyItem}>Rita Lee</div>
-                                <div className={styles.tableBodyItem}>Caneca gostosinha</div>
+                                <div className={styles.tableBodyItem}>Caneca da Razer</div>
                                 <div className={styles.tableBodyItem}>R$100,00</div>
-                                <div className={styles.tableBodyItem}>0</div>
+                                <div className={styles.tableBodyItem}>2</div>
                                 <div className={styles.tableBodyItem}>
                                     <div className={styles.pending}>Pendente de entrega</div>
                                 </div>
@@ -68,8 +68,8 @@ const Sales = ()=>{
                             </div>
                             <div className={styles.tableBody}>
                                 <div className={styles.tableBodyItem}>20</div>
-                                <div className={styles.tableBodyItem}>Chavequeira de bandido</div>
-                                <div className={styles.tableBodyItem}>Chapéu maluco</div>
+                                <div className={styles.tableBodyItem}>Suzane Pires</div>
+                                <div className={styles.tableBodyItem}>Chapéu de marca</div>
                                 <div className={styles.tableBodyItem}>R$320,00</div>
                                 <div className={styles.tableBodyItem}>12</div>
                                 <div className={styles.tableBodyItem}>
