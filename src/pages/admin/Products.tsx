@@ -1,8 +1,26 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import styles from '../styles/admin/Admin.module.css'
 import Card from '../../components/Element/Card';
 import Standard from '../../components/Button/Standard';
+import { findAllProductInfo } from '../../api/Admin';
+import TableHeader from '../../components/table/TableHeader';
+import TableBody from '../../components/table/TableBody';
 const Products = () => {
+    const [headers, setHeaders] = useState<string[]>([]);
+    const [info, setInfo] = useState<any[]>([]);
+
+    const setInfoProducts = async ()=>{
+        setHeaders(['Imagens', 'Produto', 'Preço', 'Desconto', 'Preço final', 'Quantidade em estoque', 'Vendas', 'Categoria'])
+        const data = await findAllProductInfo(1);
+        if(data.status !== 200) return;
+        console.log(data.data)
+        
+        setInfo(data.data)        
+    }
+    useEffect(()=>{
+        setInfoProducts()
+    }, [])
+
   return (
     <>
        <section  className={styles.page} id={styles.sales}>
@@ -45,30 +63,8 @@ const Products = () => {
                             <input className={styles.filter} type="number" />
                         </div>
                         <div className={styles.cardTable}>
-                            <div className={styles.tableHeader}>
-                                <div className={styles.tableHeaderItem}>Imagens</div>
-                                <div className={styles.tableHeaderItem}>Produto</div>
-                                <div className={styles.tableHeaderItem}>Preço</div>
-                                <div className={styles.tableHeaderItem}>Desconto</div>
-                                <div className={styles.tableHeaderItem}>Preço final</div>
-                                <div className={styles.tableHeaderItem}>Quantidade em estoque</div>
-                                <div className={styles.tableHeaderItem}>Vendas</div>
-                                <div className={styles.tableHeaderItem}>Categoria</div>
-                            </div>
-                            <div className={styles.tableBody}>
-                                <div className={styles.tableBodyItem}>
-                                    <div className={styles.cardImage}>
-                                        <img src="/assets/capricornio.png" alt="" />
-                                    </div>
-                                </div>
-                                <div className={styles.tableBodyItem}>Caneca de capricórnio</div>
-                                <div className={styles.tableBodyItem}>R$120,00</div>
-                                <div className={styles.tableBodyItem}>10%</div>
-                                <div className={styles.tableBodyItem}>R$108,00</div>
-                                <div className={styles.tableBodyItem}>20</div>
-                                <div className={styles.tableBodyItem}>130</div>
-                                <div className={styles.tableBodyItem}>Canecas</div>
-                            </div>
+                            <TableHeader headers={headers}/>
+                            <TableBody info={info}/>
                             <div className={styles.buttonArea}>
                                 <div>
                                     <Standard text='Novo produto'/>

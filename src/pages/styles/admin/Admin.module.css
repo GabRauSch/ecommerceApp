@@ -65,14 +65,21 @@
 .tableBody,
 .tableHeader {
     padding: 8px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    display: flex;
+}
+.tableHeader{
+    margin-right: 20px
+}
+.tableInfo{
+    overflow-y: scroll;
+    max-height: 800px;
 }
 .tableBodyItem,
 .tableHeaderItem{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
 .tableHeader{
@@ -138,7 +145,10 @@ select, .filter{
     transition: all ease .5s;
     cursor: pointer;
 }
-
+.applyButton{
+    padding: 15px;
+    align-self: flex-end;
+}
 .searchButton img{
     width: 15px;
 }
@@ -176,8 +186,18 @@ option{
 .pending{
     background-color: #fc0;
     border: 2px solid #c90;    
-    width: fit-content;
-    padding: 2px 10px;
+    border-radius: 5px;
+}
+.error{
+    background-color: #a30;
+    border: 2px solid #910; 
+    color: #fff;   
+    border-radius: 5px;
+}
+.success{
+    background-color: #3a0;
+    border: 2px solid #190; 
+    color: #fff;   
     border-radius: 5px;
 }
 .singleCardFilter{

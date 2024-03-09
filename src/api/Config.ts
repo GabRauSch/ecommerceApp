@@ -74,6 +74,7 @@ export const callGetEndpoint = async (prefix: string, url: string, params: strin
         const paramsString = params.join('/');
         queries = (queries == undefined) ? '' : queries 
         const finalUrl = `http://${backendIP}:${backendPort}${prefix}${url}/${paramsString}${queries}`
+        console.log(finalUrl)
         const token = await getTokenFromState();
         const response = await axios.get(finalUrl, {
             headers: {

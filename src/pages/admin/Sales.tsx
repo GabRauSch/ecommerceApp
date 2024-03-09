@@ -1,25 +1,52 @@
 import styles from '../styles/admin/Admin.module.css'
 import Card from '../../components/Element/Card'
+import { useEffect, useState } from 'react';
+import { findSales, findSalesOverView } from '../../api/Admin';
+import TableHeader from '../../components/table/TableHeader';
+import TableBody from '../../components/table/TableBody';
 
 const Sales = ()=>{
+    const [headers, setHeaders] = useState<string[]>([]);
+    const [info, setInfo] = useState([]);
+    const [overView, setOverView] = useState<any>({})
+
+    const setSalesOverView = async ()=>{
+        const data = await findSalesOverView(1)
+        if(data.status !== 200) return;
+
+        setOverView(data.data)
+    }
+
+    const setSalesInfo = async ()=>{
+        setHeaders([ 'Cliente', 'Produto', 'Valor', 'Em estoque', 'Status', 'Info' ])
+        const data = await findSales(1)
+        if(data.status !== 200) return;
+
+        setInfo(data.data)
+    }
+
+    useEffect(()=>{
+        setSalesInfo()
+        setSalesOverView()
+    }, [])
     return (
         <section  className={styles.page} id={styles.sales}>
             <div className={styles.pageTitle}>Vendas</div>
             <div className={styles.pageCards}>
                 <Card title="Vendas totais" color="#000">
-                    <div className={styles.cardValue}>50</div>
+                    <div className={styles.cardValue}>{overView?.purchasesCount ?? 0}</div>
                 </Card>
                 <Card title="Entregues" color="#090">
-                    <div className={styles.cardValue}>48</div>
+                    <div className={styles.cardValue}>{overView?.delivered ?? 0}</div>
                 </Card>
                 <Card title="Pendentes de entrega" color="#f90">
-                    <div className={styles.cardValue}>2</div>
+                    <div className={styles.cardValue}>{overView?.pendentDelivery ?? 0}</div>
                 </Card>
                 <Card title="Pagas esperando aprovação" color="#099">
-                    <div className={styles.cardValue}>0</div>
+                    <div className={styles.cardValue}>{overView?.aproved ?? 0}</div>
                 </Card>
                 <Card title="Vendas com erro" color="#c00">
-                    <div className={styles.cardValue}>0</div>
+                    <div className={styles.cardValue}>{overView?.error ?? 0}</div>
                 </Card>
             </div>
             <div className={styles.pageAnalysis}>
@@ -45,38 +72,8 @@ const Sales = ()=>{
                             </select>
                         </div>
                         <div className={styles.cardTable}>
-                            <div className={styles.tableHeader}>
-                                <div className={styles.tableHeaderItem}>Id da compra</div>
-                                <div className={styles.tableHeaderItem}>Cliente</div>
-                                <div className={styles.tableHeaderItem}>Produto</div>
-                                <div className={styles.tableHeaderItem}>Valor</div>
-                                <div className={styles.tableHeaderItem}>Em estoque</div>
-                                <div className={styles.tableHeaderItem}>Status</div>
-                                <div className={styles.tableHeaderItem}>Info</div>
-                            </div>
-                            <div className={styles.tableBody}>
-                                <div className={styles.tableBodyItem}>123</div>
-                                <div className={styles.tableBodyItem}>Rita Lee</div>
-                                <div className={styles.tableBodyItem}>Caneca da Razer</div>
-                                <div className={styles.tableBodyItem}>R$100,00</div>
-                                <div className={styles.tableBodyItem}>2</div>
-                                <div className={styles.tableBodyItem}>
-                                    <div className={styles.pending}>Pendente de entrega</div>
-                                </div>
-                                <div className={styles.tableBodyItem}>Sem itens no estoque
-                                </div>
-                            </div>
-                            <div className={styles.tableBody}>
-                                <div className={styles.tableBodyItem}>20</div>
-                                <div className={styles.tableBodyItem}>Suzane Pires</div>
-                                <div className={styles.tableBodyItem}>Chapéu de marca</div>
-                                <div className={styles.tableBodyItem}>R$320,00</div>
-                                <div className={styles.tableBodyItem}>12</div>
-                                <div className={styles.tableBodyItem}>
-                                    <div className={styles.pending}>Pendente de entrega</div>
-                                </div>
-                                <div className={styles.tableBodyItem}>Não entregue</div>
-                            </div>
+                            <TableHeader headers={headers}/>
+                            <TableBody info={info}/>
                         </div>
                     </>
                 </Card>

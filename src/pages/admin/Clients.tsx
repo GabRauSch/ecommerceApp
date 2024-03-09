@@ -1,56 +1,75 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import styles from '../styles/admin/Admin.module.css'
 import Card from '../../components/Element/Card';
+import CardValue from '../../components/Element/CardValue';
+import { findClients, findClientsOverView } from '../../api/Admin';
+import { clientOverView } from '../../types/Clients';
+import TableHeader from '../../components/table/TableHeader';
+import TableBody from '../../components/table/TableBody';
+
 const Clients = () => {
+    const [overView, setOverView] = useState<clientOverView>();
+    const [headers, setHeaders] = useState<string[]>([]);
+    const [info, setInfo] = useState<any[]>([])
+
+    const setOverViewInfo = async ()=>{
+        const data = await findClientsOverView(1);
+        if(data.status !== 200) return 
+        
+        setOverView(data.data)
+    }
+    
+    const setInfoClients = async ()=>{
+        setHeaders(['Cliente', 'Compras', 'Primeira compra', 'Ultíma compra', 'Total comprado'])
+        const data = await findClients(1);
+        if(data.status !== 200) return 
+
+        setInfo(data.data);
+    }
+
+    useEffect(()=>{
+        setOverViewInfo()
+        setInfoClients()
+    }, [])
   return (
     <>
        <section  className={styles.page} id={styles.sales}>
             <div className={styles.pageTitle}>Clientes</div>
+            <div className={styles.pageCards}>
+                <Card title='Clientes'>
+                    <CardValue value={`${overView?.clientsCount ?? 'N/A'}`}/>
+                </Card>
+                <Card title='Compra Média dos clientes'>
+                    <CardValue value={`R$${overView?.avaragePurchase.toFixed(2).replace('.', ',')  ?? 'N/A'}`}/>
+                </Card>
+                <Card title='Melhor cliente'>
+                    <CardValue value={`${overView?.bestClient ?? 'N/A'}`}/>
+                </Card>
+                <Card title={`Maior compra de ${overView?.bestClient ?? 'melhor cliente'}`}>
+                    <CardValue value={`R$${overView?.greaterPurhase.toFixed(2).replace('.', ',') ?? 'N/A'}`}/>
+                </Card>
+            </div>
             <div className={styles.pageAnalysis}>
                 <Card title="Lista de clientes">
                     <>
                         <div className={styles.singleCardFilter}>
                             <select name="filter" id="field">
                                 <option value="">Sem filtro</option>
-                                <option value="">Local</option>
                                 <option selected value="">Compras</option>
-                                <option value="">Local</option>
                                 <option value="">Em estoque</option>
                                 <option value="">Status</option>
                                 <option value="">Info</option>
                             </select>
                             <select name="filter" id="value">
-                                <option value="">Todos</option>
-                                <option selected value="">maior que </option>
-                                <option value="">menor que </option>
+                                <option  defaultValue={'Todos'} value="Todos">Todos</option>
+                                <option  value="Maior que">maior que </option>
+                                <option value="Menor que">menor que </option>
                             </select>
                             <input className={styles.filter} type="number" />
                         </div>
                         <div className={styles.cardTable}>
-                            <div className={styles.tableHeader}>
-                                <div className={styles.tableHeaderItem}>Cliente</div>
-                                <div className={styles.tableHeaderItem}>Compras</div>
-                                <div className={styles.tableHeaderItem}>Local</div>
-                                <div className={styles.tableHeaderItem}>Primeira compra</div>
-                                <div className={styles.tableHeaderItem}>Ultíma compra</div>
-                                <div className={styles.tableHeaderItem}>Total comprado</div>
-                            </div>
-                            <div className={styles.tableBody}>
-                                <div className={styles.tableBodyItem}>Rita Lee</div>
-                                <div className={styles.tableBodyItem}>123</div>
-                                <div className={styles.tableBodyItem}>Pinheira</div>
-                                <div className={styles.tableBodyItem}>14/11/2023</div>
-                                <div className={styles.tableBodyItem}>21/02/2024</div>
-                                <div className={styles.tableBodyItem}>R$400,00</div>
-                            </div>
-                            <div className={styles.tableBody}>
-                                <div className={styles.tableBodyItem}>Ricardo Lee</div>
-                                <div className={styles.tableBodyItem}>120</div>
-                                <div className={styles.tableBodyItem}>Pinheira</div>
-                                <div className={styles.tableBodyItem}>14/01/2024</div>
-                                <div className={styles.tableBodyItem}>21/02/2024</div>
-                                <div className={styles.tableBodyItem}>R$200,00</div>
-                            </div>
+                            <TableHeader headers={headers}/>
+                            <TableBody info={info}/>
                         </div>
                     </> 
                 </Card>
